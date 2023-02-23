@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title>idk</title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <script>
+                let html;
+
+function display_html(){
+    // console.log(html)
+    $("body").append(html)
+$(".p-3").find("img").attr("src", "http://ec2-3-108-196-161.ap-south-1.compute.amazonaws.com/static/images/login.png")
+}
+            $(document).ready(()=>{
+                $.ajax({
+                    url: "http://ec2-3-108-196-161.ap-south-1.compute.amazonaws.com/",
+                    success: ((data)=>{
+                        html = data
+                        display_html()
+                    })
+                })
+            })
+        </script>
+    </body>
+</html>
